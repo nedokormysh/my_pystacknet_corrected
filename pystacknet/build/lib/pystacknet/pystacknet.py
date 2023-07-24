@@ -19,7 +19,9 @@ from pystacknet.metrics import check_regression_metric, check_classification_met
 from sklearn.model_selection import KFold
 from sklearn.utils import check_X_y,check_array,check_consistent_length, column_or_1d
 import inspect
-from sklearn.externals.joblib import delayed,Parallel
+import joblib
+import sys
+sys.modules['sklearn.externals.joblib'] = joblib
 import operator
 import time
 from sklearn.preprocessing import LabelEncoder
