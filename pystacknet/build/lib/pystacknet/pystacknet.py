@@ -22,6 +22,7 @@ import inspect
 import joblib
 import sys
 sys.modules['sklearn.externals.joblib'] = joblib
+from joblib import delayed,Parallel
 import operator
 import time
 from sklearn.preprocessing import LabelEncoder
